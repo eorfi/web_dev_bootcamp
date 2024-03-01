@@ -1,0 +1,19 @@
+Typs of positioning 
+static positioning - relative positioning - absolute positioning - fixed positioning
+
+https://appbrewery.github.io/css-positioning/
+
+static positioning
+In this case this is just what default html does when add anter items
+it just goes at the bottom of whatever previous there
+
+relative positioning
+positioning relative to default position
+relative position takes the static position and then you can move it relativeto that location
+Now, remember, relative does not mean relativeto anything else 
+
+absolute position
+position relativeto nearest positioned ancestor or top left cornr og webpage
+
+fixed positioning
+position relativeto top left cornrof browser window

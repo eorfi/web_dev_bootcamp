@@ -1,0 +1,35 @@
+/* Write your code here: */
+
+/* this is called group selector */
+h1, h2 {
+    color: blueviolet;
+}
+
+/* this is called child selector
+and you can use this selrctor only tow items only not more that tow ,
+that mean it is only one level deap in the html file*/
+.box > .done {
+    color: firebrick;
+}
+
+
+/* Descendant = Apply to a descendent of left side */
+/* this is  called descendant combination selector */
+.box .list {
+    color: blue;
+}
+
+/* This is called chaining selectors */
+/* chaining = Apply Where All selectors are true and all of this element are in a single element */
+
+li.done {
+    color: seagreen;
+}  
+
+
+/* and you can also do combining Combiners */
+
+
+ul > p.done {
+    font-size: 0.5rem;
+}
