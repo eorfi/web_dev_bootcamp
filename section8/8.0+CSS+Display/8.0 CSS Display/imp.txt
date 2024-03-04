@@ -1,0 +1,8 @@
+block elements can change in height and width, no muter you
+change the width, it is not going to bring the next line up 
+
+inline elements cannot be changeed in terms of heightand width beacause thay fit to the widthof heightoc content
+
+inline-block elements is the one that gives us the powers of both, essentially allowing us to change the heightand width 
+but also if was large, then it might to occupy it's own line
+but if it's small enough, then it could fit on same line as anther inline 
