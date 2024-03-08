@@ -13,7 +13,7 @@ relative position takes the static position and then you can move it relativeto 
 Now, remember, relative does not mean relativeto anything else 
 
 absolute position
-position relativeto nearest positioned ancestor or top left cornr og webpage
+position relativeto nearest positioned ancestor or top left cornr go webpage
 
 fixed positioning
 position relativeto top left cornrof browser window
