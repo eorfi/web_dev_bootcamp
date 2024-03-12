@@ -19,8 +19,9 @@
     }
     .container{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows:    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      /* this is anther easy way by using rpeat */
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows:   repeat(8, 1fr)  ;
       /* to remove the gap when you try mahe the sxrean biger you mush make the widtha constant numer as in this example is 800 px */
       width: 800px;
     } 

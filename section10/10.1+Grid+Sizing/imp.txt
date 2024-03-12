@@ -1,0 +1,11 @@
+https://appbrewery.github.io/grid-sizing/
+
+this is the answer of the last test
+
+.grid-container {
+ 
+display: grid;
+grid-template-columns: auto 400px minmax(200px, 500px);
+grid-template-rows:1fr 1fr 2fr;
+grid-auto-rows: 50px --> this is set the new items with 50px hight 
+}
