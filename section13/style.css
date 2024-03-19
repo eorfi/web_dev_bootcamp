@@ -1,0 +1,87 @@
+
+ body{
+    background-color: #222831;
+  }
+
+h1{
+    font-family: "Rubik Broken Fax", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-top: 100px;
+    color: #EEEEEE;
+    margin-bottom: 0;
+}
+
+h3{
+        font-family: "Just Me Again Down Here", cursive;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 30px;
+        color: #EEEEEE;
+        text-align: center;
+        justify-content: center;
+        margin-top: 0
+      
+}
+
+.heading{
+    border: solid 5px #76ABAE; /* Adjust thickness as needed */
+    padding: 10px; /* Add padding for content spacing (optional) */
+    width: 400px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 550px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+
+
+.part2 > img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 665px;
+    margin-top: 50px;
+}
+
+
+.part2 > h3{
+    color: #76ABAE;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.part2 > p{
+    color: #EEEEEE;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+#pointed {
+    border: dotted #76ABAE 6px;
+    border-bottom: none;
+    width: 4%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+.part3 > h3{
+    color: #76ABAE;
+}
+
+.part3 > h5{
+    color: #EEEEEE;
+    text-align: center;
+}
+
+.part3 > p{
+    color: #B5C0D0;
+    text-align: center;
+}
