@@ -13,7 +13,7 @@ h1{
     margin-bottom: 0;
 }
 
-h3{
+h2{
         font-family: "Just Me Again Down Here", cursive;
         font-weight: 700;
         font-style: normal;
@@ -49,7 +49,7 @@ h3{
 }
 
 
-.part2 > h3{
+.part2 > h2{
     color: #76ABAE;
     font-size: 40px;
     margin-top: 5px;
@@ -72,16 +72,91 @@ h3{
 
 }
 
-.part3 > h3{
+.parent {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    width: 50%;
+    margin: 100px auto 0 auto;
+    text-align: left;
+    row-gap: 2rem;
+  }
+
+  .code-img {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+  }
+  
+  .chilli-img {
+    width: 50%;
+    margin-left: 30px;
+  }
+
+  .typing > img{
+    height: 200px;
+    width: 200px;
+  }
+
+.skills > h2{
     color: #76ABAE;
 }
 
-.part3 > h5{
-    color: #EEEEEE;
+.coding > h3{
+    color: #76ABAE;
+}
+
+.coding > p{
+    color: #B5C0D0;
+}
+
+.hot-wings > h3{
+    color: #76ABAE;
+}
+
+.hot-wings> p{
+    color: #B5C0D0;
+}
+
+.contact-me > h2{
+    color: #76ABAE;
+}
+
+.contact-me > h3{
+    color: #76ABAE;
     text-align: center;
 }
 
-.part3 > p{
-    color: #B5C0D0;
+.contact-me > .contact-message{
     text-align: center;
+    color: #B5C0D0;
+    margin-bottom: 50px;
 }
+
+.btn{
+    background: #76ABAE;
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    color: #EEEEEE;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    margin-left: 670px;
+}
+
+.foter{
+    background-color: #76ABAE;
+    width: 100%;
+    height: 200px;
+    margin-top: 100px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0;
+}
+
+.foter > h4{
+    margin-left: 320px;
+    margin-top: 100px;
+}
+

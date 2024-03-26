@@ -1,0 +1,227 @@
+// alert("hello");
+// alert("world");  // print
+// 2+3;
+// typeof(23);
+// typeof("eyad");
+// typeof(true);
+
+// prompt("enter your name") // input
+// var myname = "eyad";
+// alert(myname);
+
+// var yourname = prompt("what is your name?"); // to make a varuabul
+// alert("my name is "+myname+", welcome to my course "+yourname)  
+// alert("hello " + "eyad")
+
+// var name = "eyad"
+// var message = "hello"
+
+// alert(message + " this is " + name)  // concatination
+
+// name.length
+
+// var full_char = 280
+// var input_text = prompt("enter your text here!")
+// var user_input_lenght = input_text.length
+// var remaing_char = full_char - user_input_lenght
+// alert("you enterrd "+ user_input_lenght +", you still has " +remaing_char+ "  letters you can type it.")
+
+// var name = "eyad";  // chosing a part from your word
+// name.slice(3,4);
+
+// var tweet = prompt("enter your tweet here");
+// var tweet_under_140 = tweet.slice(0,140);
+// alert (tweet_under_140);
+
+
+// var x = "python";
+// x = x.toUpperCase();
+// alert(x);
+
+// var name = "Eyad";
+// name = name.toLowerCase();
+// alert(name);
+
+////////////////////////////////////////////////////////////
+
+// var name = prompt("enter your name here: ");
+// var name_firs_letter = name.slice(0,1); 
+// name_firs_letter = name_firs_letter.toUpperCase();
+// var rest_of_name = name.slice(1,name.length);
+// rest_of_name = rest_of_name.toLowerCase();
+// final_name = name_firs_letter+rest_of_name;
+// alert("Hello "+final_name);
+
+//////////////////////////////////////////////////////////
+
+// var dogAge = prompt("enter your dogage here. ");
+// var huanAge = ((dogAge-2)*4)+21;
+// alert("your age of the dog if he is human is " +huanAge);
+
+//////////////////////////////////////////////////////////
+
+// and this is call Increment expression
+// var x = 5;
+// x++ ; this is the same as x= x+1
+// x-- Decrement expression
+
+// if you want to increase the value of var by more than one
+// x += 7
+
+// var x = 8;
+// var y = 2;
+// x += y;
+
+////////////////////////////////////////////////////////////
+
+// var dogAge = prompt("enter your dogage here. ");
+// var huanAge = ((dogAge-2)*4)+21;
+// alert("your age of the dog if he is human is " +huanAge);
+
+////////////////////////////////////////////////////////////
+
+// this is the function 
+
+// function introdution() {
+//     alert("Hello");
+//     alert("my name is eyad");
+//     alert("this is a function");
+// }
+// introdution();
+// in tere you can change alert to somethinge csalled console.log()
+// so the difference between the console log and the alert is that the alert is somethinge that the user can see.
+//but the console.log are only for the developers they only show up in the console, wich is not intented for the user.
+
+///////////////////////////////////////////////////////////
+
+// https://stanford.edu/~cpiech/karel/ide.html
+
+// this is a helpful tool to learn functions
+
+// for exampile
+
+// function main(){
+//    //your code here
+//    goInSquare();
+// }
+
+// function goInSquare(){
+//    move();
+//     move();
+//    turnLeft();
+//    move();
+//     move();
+//    turnLeft();
+//     move();
+//    move();
+//    turnLeft();
+//     move();
+//    move();
+//    turnLeft();
+// }
+/////////////////////////////////////////
+
+// functions with inputs
+// function getMilk(money) { 
+//   var bottle_cost = 1.5;
+//   var bottles = money/bottle_cost;
+//   console.log("leaveHouse");
+//   console.log("moveRight");
+//   console.log("moveRight");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveRight");
+//   console.log("moveRight");
+//   console.log("buy " + bottles + " bottles of Milk")
+//   console.log("moveLeft");
+//   console.log("moveLeft");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveLeft");
+//   console.log("moveLeft");
+//   console.log("enterHouse");
+// }
+// getMilk(6);
+
+///////////////////////////////////////////
+
+// function lifeInWeeks(age) {
+    
+// /************Don't change the code above************/    
+    
+//     //Write your code here.
+//     var x = (90 - age)*356;
+//     var y = (90 - age)*52;
+//     var z = (90 - age)*12;
+//     alert("You have " +x+ " days, " +y+ " weeks, and " +z+ " months left.");
+
+    
+// /*************Don't change the code below**********/
+// }
+// lifeInWeeks(56);
+
+//////////////////////////////////////////////////////////////////
+
+// function getMilk(money) {
+//   console.log("go get milk");
+//   console.log("buy "+ calcBottles(money, 1.5) +" bottes of milk")
+//   return calcChange(money, 1.5); 
+// }
+
+// function calcBottles(startMoney, costPerBottle) {
+//   var num_of_bottles = Math.floor(startMoney/costPerBottle);
+//   return num_of_bottles;
+// }  
+
+// function calcChange(startingAmount, costPerBottle) {
+//   var change = startingAmount % costPerBottle;
+//   return change;
+// }
+
+// console.log("hello master, here is your change "+ getMilk(5));
+
+////////////////////////
+
+// function getMilk(money, costPerBottle) {
+//   console.log("go get milk");
+//   console.log("buy "+ calcBottles(money, costPerBottle) +" bottes of milk")
+//   return calcChange(money, costPerBottle); 
+// }
+
+// function calcBottles(startMoney, costPerBottle) {
+//   var num_of_bottles = Math.floor(startMoney/costPerBottle);
+//   return num_of_bottles;
+// }  
+  
+// function calcChange(startingAmount, costPerBottle) {
+//   var change = startingAmount % costPerBottle;
+//   return change;
+// }
+
+// console.log("hello master, here is your change "+ getMilk(5, 1.5));
+
+//////////////////////////////////////////////////////////////////////
+
+//Create your function below this line.
+//The first parameter should be the weight and the second should be the height.
+
+// function bmiCalculator(w, h){
+//     var bmi = w/(h*h);
+//     or
+//     var bmi = w/Math.pow(h);
+//     return bmi;
+// }
+
+// var bmi = bmiCalculator(65, 1.8);
+
+// /* If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
+
+// var bmi = bmiCalculator(65, 1.8); 
+
+// bmi should equal 20 when it's rounded to the nearest whole number.
+
+// */
