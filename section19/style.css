@@ -1,0 +1,13 @@
+body {background-color: chartreuse;}
+button{background-color: black;
+       color: burlywood; }
+
+.big-title {
+       font-size: 10rem;
+       color: blue;
+       font-family: cursive;
+}
+
+.margin-50 {
+       margin: 50px;
+}
