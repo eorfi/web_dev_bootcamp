@@ -1,0 +1,186 @@
+but this is almost on a level of torture and entirely unnecessary because no web developer will create
+
+a website using just Node.
+
+In almost all the cases, when we're creating a backend using node, we're going to be using Express.
+
+Because of all these advantages; we get better readability,
+
+we have to write less code,
+
+we have the ability to add middleware, which I'll explain to you very soon what it is and how it acts
+
+i will make my own server in section 24 folder
+step_1 cd to the folder path
+step_2 inside the folder we are going to creat our new project dirctory --> mkdir "3.1 Express server" 
+step_3 cd into this dirctory
+step_4 npm init -y
+step_5 npm i Express
+step_1 go into the package.jason folder and make "type": "module",
+
+
+---------------------------------------------
+inside the index.js we doing to type the server applcation
+
+*how to go to our host go inside the browther and type this link --> localhost:3000 and this is the location of our server 
+
+--------------------------------------------
+
+
+But first, let's try and understand what exactly is localhost.
+
+Localhost is simply when we don't have a server on the internet and instead, we want to host our server
+locally,
+
+so making our own computer, the server of our website's backend. And that is the local part of our
+
+The port is kind of equivalent to a bunch of doors on our server computer, and each of these doors
+have an address.
+
+Once we've set up our server to be listening on that particular door, then when we try and access localhost:
+
+3000, then it's going to look onto our own computer and it's going to try and find the door that is
+
+Number 3000,
+
+Now, the reason why there are many doors on our computer is because it has to be able to listen for
+
+different incoming requests.
+---------------------------------------------
+
+Now, we can actually check which ports on our computer are currently
+
+listening for interactions from the outside.
+buy wright this command into the terminal --> nest -ano |findstr "LISTENING"  
+
+----------------------------------------------
+
+If we wanted to stop our server from running, we can use the control key on our keyboard and then C (Ctrl +C)
+ -------------------------------------------------
+
+ What exactly is HTTP and what does it stand for?
+
+Well, the first part you already know because it stands for HyperText, just like HTML stands for hypertext.
+The second part, the Transfer Protocol basically describes this as a language, a language that allows
+a language that allows
+
+computers to talk to each other across the Internet.
+
+When we make these HTTP requests, there are five main words that you'll come across and it's GET, POST,
+
+PUT, PATCH and DELETE.
+
+get -> when you want to request a resource from the server.
+post -> this case, what you're doing is you are sending a resource to the server.
+put&patch -> somewhat related because essentially what they are is they are update methods.
+ PATCH is a little bit different and similar to the word in English,
+
+essentially you want to patch-up a resource even though both of these are updates, they work a little
+
+Finally, we have the DELETE word, which is pretty easy to understand.
+It just deletes resources,
+
+-----------------------------------------
+
+So one thing you've noticed is every time I've changed any sort of code on my server side, I've had
+
+to stop my server and then restart my server, which frankly is a bit of a pain.
+
+What can we do instead?
+
+Well, professional Node Developers use a tool called Nodemon, and what Nodemon does is pretty simple.
+
+It automatically restarts the node application when it detects files changes.
+
+to install it --> npm i -g nodemon 
+g -> global
+
+Now, once the installation has completed, then we can now use it by typing "nodemon" and then "index.js"
+-------------------------------------------------------
+
+The response codes in HTTP are normally grouped into five categories, and this is from MDN Docs,
+
+and it tells you that the numbers between 100 and 199 are usually informational.
+
+The 200 are usually telling you that something went successfully.
+
+The 300 are usually a redirection of the website where the server is redirecting you to a different
+
+location for the thing that you're requesting.
+
+The 400, including that famous 404, comes from client error responses.
+
+So it means that the client has requested or done something that is not right and the 500 are the server-
+
+side error responses.
+
+---------------------------------------------------------------------------------------------
+
+postman
+
+You can target a specific URL or an endpoint and you can also specify the type of request you want to
+
+make.
+
+For example, I've got several tabs here open with different requests that I'm testing.
+
+This is a POST, this is a GET, this is a PUT and you can see in the dropdown when you make these
+
+requests, you can specify which if any of the different types of methods you want to use,
+
+and then you can add in your URL, add in your endpoints, etcetera.
+
+And then you can also add values to the body.
+
+So for example, if I want to create a new POST request to my local host, I can change this to POST
+
+and I can go into the body and add in some URL encoded form-data.
+
+So I could say, well, in this field, the key is called name and the value that I've entered is my name.
+
+
+It seems like you're asking about "Postman." Postman is a popular collaboration platform for API development. It simplifies the process of creating, testing, and managing APIs by providing a user-friendly interface and a suite of tools for developers. Here are some key features of Postman:
+
+API Testing: Allows you to create and execute API requests, test APIs with different parameters, and validate responses.
+
+Collaboration: Teams can collaborate on API development by sharing collections, environments, and other components.
+
+Automation: You can automate API testing and integrate it into CI/CD pipelines.
+
+Documentation: Postman can generate and host API documentation automatically from your requests.
+
+Mock Servers: It provides the ability to create mock servers to simulate API endpoints, which is useful for testing and development.
+
+Monitoring: Postman offers monitoring features to check API performance and uptime.
+
+If you have any specific questions or need information on a particular aspect of Postman, feel free to ask!
+
+--------------------------------------------------
+
+ public folder usually is the place where we put our static
+files such as our HTML files, CSS files, images, things that don't really change and don't need to
+be acted upon.
+--------------------------------------------------------------------------------------
+
+In Node.js, "middleware" refers to functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. Middleware can execute any code, make changes to the request and response objects, end the request-response cycle, or call the next middleware function in the stack.
+
+Middleware functions are typically used for:
+
+Logging: Tracking request details like URL, method, headers, etc.
+Authentication: Checking if a user is logged in or has permissions to access a certain resource.
+Parsing: Parsing incoming request bodies (e.g., JSON, URL-encoded data).
+Session Handling: Managing user sessions.
+Error Handling: Catching and responding to errors in a standardized way.
+
+في Node.js، يشير مصطلح "الوسيط" أو "Middleware" إلى وظائف برمجية تتوسط بين استقبال الطلب ومعالجته في دورة حياة الطلب-الاستجابة. هذه الوظائف يمكن أن تتفاعل مع كائن الطلب (req)، كائن الاستجابة (res)، ووظيفة الوسيط التالية في السلسلة.
+
+يمكن لوظائف الوسيط أن:
+
+تنفيذ أي كود: مثل تسجيل البيانات أو التحقق من شيء معين.
+تعديل كائنات الطلب والاستجابة: مثل إضافة معلومات أو تغيير إعدادات.
+إنهاء دورة الطلب-الاستجابة: كإرسال استجابة وإيقاف المزيد من المعالجة.
+استدعاء الوسيط التالي: باستخدام الدالة next() لنقل التحكم إلى الوسيط التالي في السلسلة.
+
+-----------------------------------------------
+
+body-parser هو حزمة في Node.js تُستخدم لتحليل البيانات المرسلة عبر طلبات HTTP وتحويلها إلى كائنات JavaScript يمكن الوصول إليها عبر req.body. هذا التحليل يكون ضروريًا لفهم البيانات القادمة من العميل، مثل النماذج (forms) أو الطلبات المرسلة باستخدام AJAX.
