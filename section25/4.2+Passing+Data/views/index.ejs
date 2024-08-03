@@ -1,0 +1,50 @@
+<!-- What locals is, is basically a way to access all of the variables that get sent over with a
+
+res.render.
+
+Now you can also manually set res.locals and you can set it equal to some piece of data.
+
+So you could say {data: 42} and that locals variable is what can be accessed in the rendered EJS file.
+
+By simply using something like fruits, the name of the variable that gets passed over with the
+
+res.render(),
+
+essentially, what we're doing is we're using the shorthand of locals.name of variable.
+
+This locals variable always exists and that means that we can always use it to check for the existence
+
+of variables that are passed over to EJS,
+
+and if this in fact does exist, then we can use it as we would normally.
+
+This is just something that's quite important to be aware of when you're passing data from the server
+
+to the EJS side. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Letters</title>
+</head>
+
+<body>
+  <!-- Write your code here -->
+  <!-- we here put .locals to check if there is numberofletters ifnot contunuo the code -->
+  <% if (locals.numberOfLetters){ %>
+  <h1>There are  <%=numberOfLetters%> lettrers in your name.</h1>
+  <%} else {%>
+    <h1>Write your name below:-</h1>
+  <% } %>
+  <form action="/submit" method="POST">
+    <input type="text" name="fName" placeholder="First name">
+    <input type="text" name="lName" placeholder="Last name">
+    <input type="submit" value="OK">
+  </form>
+</body>
+
+</html>
