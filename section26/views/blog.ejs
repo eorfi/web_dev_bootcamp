@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="blog-content">
+        <h1>All Blogs</h1>
+        <% blogs.forEach((blog, index) => { %>
+            <div class="blog-entry">
+                <h2 class="blog_t"><%= blog.title %></h2>
+                <p class="blog_c"><%= blog.content %></p>
+                <br><a class="edit_b" href="/edit/<%= index %>">Edit</a>
+                <form action="/delete/<%= index %>" method="POST" style="display:inline; ">
+                    <button class="delete_b"  type="submit">Delete</button>
+                </form>
+            </div>
+            <hr id="pointed">
+        <% }) %>
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>

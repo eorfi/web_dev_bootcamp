@@ -1,0 +1,117 @@
+html {
+    background-color: #8D493A;
+}
+
+.upeer_div {
+    background-color: #D0B8A8;
+    width: 100%;
+    border-radius: 20px; /* Rounded corners */
+}
+
+.upeer_div h1,h2 {
+    text-align: center;
+    color: #2F3645;
+}
+
+#pointed {
+    border: dotted #D0B8A8 6px;
+    border-bottom: none;
+    width: 35%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+.form-container {
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Align inputs vertically */
+    gap: 10px; /* Add space between the inputs */
+    text-align: center; /* Center text within the inputs */
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    color: #8D493A; /* Text color */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 20px; /* Rounded corners */
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #8D493A; /* Button background color */
+    color: #D0B8A8;
+    border: none; /* Remove border */
+    border-radius: 20px; /* Rounded corners */
+}
+
+.lower_div {
+    background-color: #D0B8A8;
+    width: 100%;
+    border-radius: 20px; /* Rounded corners */
+}
+
+input::placeholder {
+    color: #8D493A ; /* Placeholder text color */
+}
+
+/* Add styling for the header */
+header {
+    background-color: #D0B8A8;
+    color: #ffffff;
+    padding: 10px 0;
+    border-radius: 20px; /* Rounded corners */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #8D493A;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#Update {
+    color: #8D493A;
+    background-color: #D0B8A8;
+}
+
+.delete_b, .edit_b {
+    color: #D0B8A8;
+    background-color: #8D493A;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.blog-entry {
+    background-color: #D0B8A8;
+    border-radius: 20px;
+}
+
+.footer_text{
+    color: #D0B8A8;
+}

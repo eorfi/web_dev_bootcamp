@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="blog-content">
+        <h1>Edit Blog</h1>
+        <form action="/edit/<%= blogId %>" method="POST">
+            <br><input type="text" name="blogTitle" value="<%= blog.title %>" placeholder="Title"><br>
+            <br><input type="text" name="blogContante" value="<%= blog.content %>" placeholder="Content"><br>
+            <br><input id="Update" type="submit" value="Update"><br>
+        </form>
+    </div>
+</body>
+</html>
