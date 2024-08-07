@@ -1,0 +1,14 @@
+when i say git commit -m "..."
+this -m is mean commit message, usually with commit message, they written in the present tense
+
+you can see what commits you have made
+by using the, "git log" command.
+
+we can use a special command called, "git checkout", to revert back or roll back to
+the last position in our local repository.
+
+we can use a Git command to check out what are the differences between the current version and the last save point in our Git repository 
+To do that, you can use the command, "git diff".
+
+git checkout that is going to be really useful for you. on this command that basically asks to roll back this to the last version
+that was committed in our local repository.
