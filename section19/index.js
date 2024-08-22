@@ -143,12 +143,12 @@
 // Then instead of using these pre-built ones you can use something called .animate and this allows you to define some custom css that you want to gradually animate towards
 // you have to stick to things that have a numeric value
 
-// العتامة
-$("button").click(function() {  
-    $("h1").animate({opacity: 0.5});
-});
+// // العتامة
+// $("button").click(function() {  
+//     $("h1").animate({opacity: 0.5});
+// });
 
-// if you want to have more than one of these animations happening, then you can chain them together.
-$("button").click(function() {  
-    $("h1").slideUp().slideDown().animate({opacity: 0.5});
-});
+// // if you want to have more than one of these animations happening, then you can chain them together.
+// $("button").click(function() {  
+//     $("h1").slideUp().slideDown().animate({opacity: 0.5});
+// });

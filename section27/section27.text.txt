@@ -12,3 +12,7 @@ To do that, you can use the command, "git diff".
 
 git checkout that is going to be really useful for you. on this command that basically asks to roll back this to the last version
 that was committed in our local repository.
+
+to make a get clone --> git clone url
+
+we can make a new branch by this way git branch the name of the branch, to go to anther branch git checkout 'branch name' and to ceckout branch you rightnow make this comment git branch

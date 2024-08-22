@@ -91,7 +91,7 @@ if(gustList.includes(user_name)){
 
 ///////////////////////////////////////////////////
 
-// if you want to element to your list
+// if you want to add element to your list
 //  gustList.push("a") // this will add the element to the end of the list
 
 // gustList.pop() will remove the last item from the list
@@ -190,7 +190,7 @@ while (numberOfBottles >= 0) {
 //////////////////////////////////////////////////////
 
 // The for loops
-
+// start_point/condition/step
 for (var i=0; i<=10; i++) {
     console.log(i);
 }
@@ -218,6 +218,9 @@ for (var i=1; i<=100; i++) {
 ///////////////////////////////////////////////////////
 
 // this is a hard chalnge
+ 
+
+// for (var i = 2; i < n; i++) { output.push(output[output.length - 2] + output[output.length - 1]); }: This loop starts from 2 and goes up to n - 1. In each iteration, it calculates the next Fibonacci number by adding the last two numbers in the output array and then pushes this new number into the output array.
 
 function fibonacciGenerator (n) {
     //Do NOT change any of the code above 👆

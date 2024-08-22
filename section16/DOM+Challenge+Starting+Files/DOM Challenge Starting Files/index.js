@@ -56,9 +56,11 @@ document.querySelector("button").classList.add("invisible");
 
 document.querySelector("button").classList.toggle("invisible");
 
-/////////////////
+//////////////////////////////////////
 
+// add a class
 document.querySelector("h1").classList.add("huge");
+// removing a class
 document.querySelector("h1").classList.toggle("huge");
 
 

@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 function passwordCheck(req, res, next){
     const password = req.body["password"];
-    if (password === "nodeJS") {
+    if (password === "nodejs") {
         userIsAuthorised = true;
     }
     next();   
