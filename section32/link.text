@@ -1,0 +1,27 @@
+https://www.mycompiler.io/view/08q0XDT7TFp
+
+CREATE TABLE customers (
+  id INT,
+  first_name STRING,
+  last_name STRING,
+  address STRING, age STRING,
+  PRIMARY KEY (id)
+)
+
+CREATE TABLE orders (
+  id INT NOT NULL,
+  order_number INT,
+  customer_id INT,
+  product_id INT,
+  PRIMARY KEY(id),
+  FOREIGN KEY (customer_id) REFERENCES customers(id), 
+  FOREIGN KEY (product_id) REFERENCES product(id)
+)
+
+CREATE TABLE product (
+  id INT NOT NULL,
+  name TEXT,
+  price REAL,
+  PRIMARY KEY(id)
+)
+
