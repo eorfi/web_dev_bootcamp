@@ -1,16 +1,15 @@
 {
-  "name": "learning_npm",
+  "name": "your-project-name",
   "version": "1.0.0",
-  "description": "learning about npm",
+  "description": "Your project description",
   "main": "index.js",
-  "type": "module",
-  // The type of project is module based so we can use imports and ES modules instead of using the dufault which is common js 
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "eyad_elorfi",
-  "license": "ISC",
   "dependencies": {
-    "sillyname": "^0.1.0"
-  }
+    "superheroes": "^3.0.0"
+  },
+  "type": "module"
 }
+
+// The type of project is module based so we can use imports and ES modules instead of using the dufault which is common js 

@@ -1,0 +1,58 @@
+In the code you provided, your Express.js server is already connected to a PostgreSQL database using the `pg` library. The JavaScript (Node.js) file interacts with the PostgreSQL database by executing queries using `db.query`. Here's how the communication between your JavaScript code and PostgreSQL database works:
+
+1. **PostgreSQL Client Setup**:
+   - The `pg.Client` is used to create a client connection to the PostgreSQL database. The connection details (username, host, database, password, port) are passed in when creating the client object.
+   - The `db.connect()` function is called to establish the connection.
+
+    ```js
+    const db = new pg.Client({
+      user: "postgres",
+      host: "localhost",
+      database: "world",
+      password: "123456",
+      port: 5432,
+    });
+    db.connect();
+    ```
+
+2. **Making Queries**:
+   - The `db.query()` function is used to run SQL queries against the database. It takes two parameters:
+     - The SQL query string.
+     - An array of values to safely parameterize the query (this helps prevent SQL injection).
+   
+    For example, in the `checkVisited()` function, the SQL query retrieves a list of countries visited by a specific user:
+
+    ```js
+    const result = await db.query(
+      "SELECT country_code FROM visited_countries JOIN users ON users.id = user_id WHERE user_id = $1;",
+      [currentUserId]
+    );
+    ```
+
+3. **Handling Results**:
+   - The result of the query is an object, and `result.rows` contains an array of the rows returned by the query.
+   - You can iterate over `result.rows` to get the specific data (like `country_code` in this case).
+
+4. **Example Flow**:
+   - When the client sends a request (for example, by visiting the root route `/`), the server calls functions like `checkVisited()` and `getCurrentUser()`. These functions send SQL queries to the database to get the necessary data, which is then passed to the template (in this case, an EJS view).
+
+5. **Adding Data**:
+   - When new data is submitted through forms (as in the `/add` or `/new` routes), you use SQL `INSERT` queries to add new records into the PostgreSQL database.
+   
+   Example for adding a new user:
+   
+    ```js
+    const result = await db.query(
+      "INSERT INTO users (name, color) VALUES($1, $2) RETURNING *;",
+      [name, color]
+    );
+    ```
+
+6. **Error Handling**:
+   - It's a good practice to wrap your queries inside `try-catch` blocks to handle any database errors, as you've done in the `app.post("/add")` route.
+
+7. **Serving the Frontend**:
+   - You serve static files (like CSS, images, etc.) using `express.static("public")`.
+   - For rendering dynamic HTML, you use EJS as a templating engine in the `res.render` calls.
+
+In summary, to connect your JavaScript (Node.js) application to a PostgreSQL database, you use the `pg` library, define SQL queries in your routes, execute those queries using `db.query()`, and process the results accordingly.
