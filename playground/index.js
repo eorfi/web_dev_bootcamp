@@ -1,32 +1,36 @@
-app.post("/add", async (req, res) => {
-    const input = req.body["country"];
+import express from "express";
+import pg from "pg";
+import axios from "axios"
+import bodyParser from "body-parser";
+
+const app = express();
+const port = 3000;
+
+const db = new pg.Client({
+  user: "postgres",
+  host: "localhost",
+  database: "book_reviews",
+  password: "123456",
+  port: 5432,
+})
+
+db.connect();
+
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
+
+app.get("/", async (req, res) => {
+  try {
+      const result = await db.query("SELECT * FROM books ORDER BY date_read DESC");
+      res.render("index.ejs", {books: result.rows});
+      
+  } catch (err) {
+      console.log(err)
+      res.status(500).send("Error retrieving books from the database.")
+  }
+})
+
+app.post("/add-book", async (req,res) => {
+  const {title, auther, rating, review, date_read} = req.body;
   
-    try {
-      const result = await db.query(
-        "SELECT country_code FROM countries WHERE country_name = $1",
-        [input]
-      );
-  
-      if (result.rows.length !== 0) {
-        const data = result.rows[0];
-        const countryCode = data.country_code;
-  
-        // Insert into visited countries if not already visited
-        await db.query(
-          "INSERT INTO visited_countries (country_code) VALUES ($1) ON CONFLICT DO NOTHING",
-          [countryCode]
-        );
-  
-        const countries = await checkVisisted();
-  
-        // Send a JSON response with the new data
-        res.json({ success: true, countryCode: countryCode, total: countries.length });
-      } else {
-        res.json({ success: false, message: "Country not found." });
-      }
-    } catch (error) {
-      console.error("Error adding country:", error);
-      res.status(500).json({ success: false, message: "Server error." });
-    }
-  });
-  
+})

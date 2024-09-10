@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #FABC3F;
+}
+
+h1, h2 {
+  color: #821131;
+}
+
+/* form {
+  margin-bottom: 20px;
+} */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #E85C0D;
+  padding: 10px 0;
+}
+
+img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.button {
+  color: #821131;
+  background-color: #FDE49E;
+  border-radius: 40%;
+  border: none;
+
+}
+
+/* Basic form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+/* Style for text input fields */
+input[type="text"], input[type="number"], input[type="date"], textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #FFEEAD;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, textarea:focus {
+  border-color: #333; /* Change the color of the border when the input is focused */
+  outline: none;
+}
+
+/* Style for text area */
+textarea {
+  height: 100px;
+  resize: none;
+}
