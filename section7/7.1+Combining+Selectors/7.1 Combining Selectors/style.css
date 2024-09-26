@@ -5,6 +5,11 @@ h1, h2 {
     color: blueviolet;
 }
 
+<<<<<<< HEAD
+
+/* The child selector in CSS is used to select elements that are direct children of a specified element. It is represented by the > symbol */
+=======
+>>>>>>> 8295436eb7eb356c4cf6b67fe9b6f4819dcdf5ae
 /* this is called child selector
 and you can use this selrctor only tow items only not more that tow ,
 that mean it is only one level deap in the html file*/
@@ -13,12 +18,20 @@ that mean it is only one level deap in the html file*/
 }
 
 
+<<<<<<< HEAD
+/* The descendant combinator in CSS is used to select elements that are descendants of a specified element. It is represented by a space between two selectors. */
+=======
+>>>>>>> 8295436eb7eb356c4cf6b67fe9b6f4819dcdf5ae
 /* Descendant = Apply to a descendent of left side */
 /* this is  called descendant combination selector */
 .box .list {
     color: blue;
 }
 
+<<<<<<< HEAD
+/* Chaining selectors in CSS refers to combining multiple selectors to apply styles to elements that match all of the specified criteria. This allows for more precise targeting of elements. */
+=======
+>>>>>>> 8295436eb7eb356c4cf6b67fe9b6f4819dcdf5ae
 /* This is called chaining selectors */
 /* chaining = Apply Where All selectors are true and all of this element are in a single element */
 
@@ -32,4 +45,33 @@ li.done {
 
 ul > p.done {
     font-size: 0.5rem;
+<<<<<<< HEAD
 }
+
+
+/* The main difference between the descendant combinator and the child combinator in CSS is the level of specificity in selecting elements within the DOM hierarchy. */
+/* The descendant combinator selects all elements that are descendants of a specified element, regardless of their level of nesting. */
+/* The child combinator selects only elements that are direct children of a specified element, meaning they are one level deeper in the DOM hierarchy. */
+
+/* In CSS, child selectors, descendant selectors, and chaining selectors all allow you to target elements, but they do so in different ways. Here's how each one works:
+
+1. Child Selector (>)
+The child selector targets only the direct children of an element.
+
+Syntax: parent > child 
+This will style only the p elements that are direct children of a div (not grandchildren or further descendants).
+
+2. Descendant Selector (Space)
+The descendant selector targets all elements that are descendants (children, grandchildren, great-grandchildren, etc.) of a specific element, regardless of depth.
+
+Syntax: ancestor descendant
+This will style all p elements that are inside a div, no matter how deep the p element is nested.
+
+
+3 Chaining Selectors
+Chaining selectors means combining multiple selectors (like class, ID, or type selectors) to target a more specific element. The element must match all the conditions in the chain.
+
+Syntax: selector1.selector2, selector1#id, etc.*/
+=======
+}
+>>>>>>> 8295436eb7eb356c4cf6b67fe9b6f4819dcdf5ae

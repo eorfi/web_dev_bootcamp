@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Example</title>
+    <style>
+        /* Static (Default behavior) */
+        .static-box {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            margin: 10px;
+            position: static;
+            border: 2px solid blue;
+        }
+
+        /* Relative Positioning */
+        .relative-box {
+            width: 150px;
+            height: 150px;
+            background-color: lightgreen;
+            margin: 10px;
+            border: 2px solid green;
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        /* Absolute Positioning */
+        .absolute-box {
+            width: 150px;
+            height: 150px;
+            background-color: lightcoral;
+            margin: 10px;
+            border: 2px solid red;
+            position: absolute;
+            top: 50px;
+            left: 200px;
+        }
+
+        /* Fixed Positioning */
+        .fixed-box {
+            width: 150px;
+            height: 150px;
+            background-color: lightyellow;
+            margin: 10px;
+            border: 2px solid orange;
+            position: fixed;
+            top: 20px;
+            right: 10px;
+        }
+
+        /* Parent container for absolute positioning */
+        .container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            background-color: lightgray;
+            margin: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Static Positioning -->
+    <div class="static-box">Static Box</div>
+
+    <!-- Relative Positioning -->
+    <div class="relative-box">Relative Box</div>
+
+    <!-- Container for absolute positioning -->
+    <div class="container">
+        <div class="absolute-box">Absolute Box</div>
+    </div>
+
+    <!-- Fixed Positioning -->
+    <div class="fixed-box">Fixed Box</div>
+
+</body>
+</html>

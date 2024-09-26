@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+API -> Application Programming Inter Face 
+=======
 APi Suthenticatin مصادقة واجهة برمجة التطبيقات تصريح
 
 In terms of authentication, I like to think of it as four tiers.
@@ -39,3 +42,4 @@ When working with APIs, securing access is crucial. Here are the different types
    - **Use Case**: Modern web applications, RESTful services, and mobile apps.
 
 Each method has its own security implications and is chosen based on the specific needs and sensitivity of the data being accessed.
+>>>>>>> 8295436eb7eb356c4cf6b67fe9b6f4819dcdf5ae

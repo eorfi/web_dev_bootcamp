@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>make face using css</title>
+    <style>
+        .face{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: #f7a3a3;
+            border-radius: 300px;
+            margin: 100px auto;
+        }
+        .eye1{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff4f4;
+            border-radius: 50px;
+            top: 100px;
+            left: 100px;
+            border: 2px solid black;
+        }
+        .eye1_ball{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 20px;
+            top: 118px;
+            left: 117px;
+        }
+        .eye2{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff4f4;
+            border-radius: 50px;
+            top: 100px;
+            right: 100px;
+            border: 2px solid black;
+        }
+        .eye2_ball{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 20px;
+            top: 118px;
+            right: 117px;
+        }
+        .nose{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent; /* border-left: 25px solid transparent: This creates the left side of the triangle with a transparent border of 25px */
+            border-right: 25px solid transparent; /* border-left: 25px solid transparent: This creates the right side of the triangle with a transparent border of 25px */
+            border-bottom: 50px solid #e75a5a; /* This creates the bottom of the triangle (which is the visible part) using a solid border of 50px with a color #d6f842 (a yellowish color). */
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%); /* transform: translateX(-50%): Further centers the triangle by shifting it left by 50% of its width (since the triangle is centered based on the middle point of the element, not its left edge). */
+        }
+        
+        .mouth{
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            background-color: #e75a5a;
+            border: 2px solid rgb(159, 3, 3);
+            border-radius: 0 0 100px 100px; /* border-radius: 0 0 100px 100px: This creates a border-radius of 0px for the top-left and top-right corners and 100px for the bottom-left and bottom-right corners, giving the mouth a curved shape. */
+            top: 300px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .hair{
+            position: absolute;
+            width: 500px;
+            height: 100px;
+            background-color: #70260e;
+            border-radius: 0 0 300px 300px;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .ear1{
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background-color: #f7a3a3;
+            border-radius: 50px;
+            top: 100px;
+            left: 0px;
+            border: 2px solid black;
+        }
+        .ear2{
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background-color: #f7a3a3;
+            border-radius: 50px;
+            top: 100px;
+            right: 0px;
+            border: 2px solid black;
+        }
+        .ear1_inner{
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            background-color: #e75a5a;
+            border-radius: 20px;
+            top: 30px;
+            left: 15px;
+        }
+        .ear2_inner{
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            background-color: #e75a5a;
+            border-radius: 20px;
+            top: 30px;
+            right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="face">
+            <div class="hair"></div>
+            <div class="eye1"></div>
+            <div class="eye1_ball"></div>
+            <div class="eye2"></div>
+            <div class="eye2_ball"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="ear1"></div>
+            <div class="ear2"></div>
+        </div>
+    </div>
+</body>
+</html>
