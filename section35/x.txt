@@ -1,0 +1,2 @@
+authenticate -> مصادقة
+Restrict Access -> تقييد الوصول

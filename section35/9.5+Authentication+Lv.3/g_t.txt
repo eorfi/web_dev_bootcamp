@@ -1,0 +1,65 @@
+// Explanation of how the Google strategy works
+const explanation = `
+The Google strategy for authentication works by using OAuth 2.0 to authenticate users via their Google account. Here's a step-by-step explanation:
+
+1. **User Initiates Authentication**: When a user clicks on the "Sign in with Google" button, they are redirected to Google's OAuth 2.0 server.
+
+and this the code example 
+// Route to initiate Google authentication
+app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+
+
+2. **Google Prompts for Consent**: Google asks the user to consent to share their profile information with your application.
+
+3. **Google Redirects Back to Your Application**: After the user consents, Google redirects the user back to your application with an authorization code.
+
+4. **Application Requests Access Token**: Your application exchanges the authorization code for an access token by making a request to Google's token endpoint.
+
+5. **Application Uses Access Token**: Your application uses the access token to request the user's profile information from Google's userinfo endpoint.
+
+6. **User Information is Processed**: The user's profile information is used to either create a new user in your database or find an existing user.
+
+7. **User is Authenticated**: The user is authenticated and a session is created for them.
+
+In the code, the `
+
+passport.use(new GoogleStrategy({
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: "http://www.example.com/auth/google/callback"
+  },
+  function(accessToken, refreshToken, profile, done) {
+    User.findOrCreate({ googleId: profile.id }, function (err, user) {
+      return done(err, user);
+    });
+  }
+));
+
+// Serialize user instance to the session
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+
+// Deserialize user instance from the session
+passport.deserializeUser(function(id, done) {
+    User.findById(id, function(err, user) {
+        done(err, user);
+    });
+});
+
+
+
+
+// Route to initiate Google authentication in index.ejs
+app.get('/auth/google',
+    passport.authenticate('google', { scope: ['profile', 'email'] })
+);
+
+// Callback route that Google will redirect to after authentication
+app.get('/auth/google/callback', 
+    passport.authenticate('google', { failureRedirect: '/' }),
+    function(req, res) {
+        // Successful authentication, redirect home.
+        res.redirect('/dashboard');
+    }
+);
