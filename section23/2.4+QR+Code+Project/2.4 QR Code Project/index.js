@@ -1,5 +1,4 @@
- 
-// 1. Use the inquirer npm package to get user input.
+ // 1. Use the inquirer npm package to get user input.
 import inquirer from 'inquirer';
 // var qr = require('qr-image');
 import qr from "qr-image";

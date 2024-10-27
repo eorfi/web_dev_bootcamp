@@ -9,3 +9,50 @@ grid-template-columns: auto 400px minmax(200px, 500px);
 grid-template-rows:1fr 1fr 2fr;
 grid-auto-rows: 50px --> this is set the new items with 50px hight 
 }
+
+In CSS Grid Layout, there are various ways to size grid tracks (columns and rows). Here’s a breakdown of the different sizing options:
+
+### 1. **Fixed Size**
+   - A grid track can be given a fixed size using units like `px`, `em`, `%`, or others.
+   - Example: `grid-template-columns: 100px 200px;`
+     - This creates a grid with the first column 100px wide and the second 200px wide.
+   - **Use case:** When you want grid items to have a precise size.
+
+### 2. **Auto Size**
+   - The `auto` keyword allows the grid track to automatically adjust its size based on the content of the items inside it.
+   - Example: `grid-template-columns: auto auto;`
+     - The columns will grow to fit the content inside them.
+   - **Use case:** When you want grid items to adjust to fit the content they contain.
+
+### 3. **Fractional Size (`fr`)**
+   - Fractional sizing distributes space based on available free space in the grid container.
+   - Example: `grid-template-columns: 1fr 2fr;`
+     - This divides the available space into 3 parts, giving 1 part to the first column and 2 parts to the second.
+   - **Use case:** When you want a dynamic layout that adjusts based on the size of the grid container, but maintains proportions between tracks.
+
+### 4. **Minmax Size (`minmax()`)**
+   - The `minmax()` function allows you to define a minimum and maximum size for a grid track.
+   - Example: `grid-template-columns: minmax(100px, 300px);`
+     - This means the column will be at least 100px wide but no more than 300px, adjusting within that range based on available space.
+   - **Use case:** When you need flexible tracks that can shrink or grow, but stay within a specific range.
+
+### 5. **Repeat (`repeat()`)**
+   - The `repeat()` function is used to repeat columns or rows a certain number of times with specified sizes.
+   - Example: `grid-template-columns: repeat(3, 1fr);`
+     - This creates three equal columns that each take up one fractional unit of space.
+   - **Use case:** When you need a repeated pattern of grid tracks without manually typing each size.
+
+### Example combining all:
+```css
+.grid {
+  display: grid;
+  grid-template-columns: 100px auto minmax(100px, 1fr) repeat(2, 2fr);
+}
+```
+In this example:
+- The first column has a fixed width of `100px`.
+- The second column has an `auto` size.
+- The third column will be at least `100px` and at most one fraction of available space.
+- The last two columns will each take up `2fr` of the available space. 
+
+These sizing options allow for flexible and dynamic layouts in CSS Grid! 
