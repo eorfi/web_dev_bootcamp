@@ -21,7 +21,7 @@ function App() {
       <button onClick={getTime}>Get Time</button>
       
     </div>
-  );
+  );  
 }
 
 export default App;
