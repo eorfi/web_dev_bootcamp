@@ -1,0 +1,6 @@
+open the ubuntu code box
+cd ic-projects/
+if you need to make new folder 
+dfx new thefilename
+then cd to the folder do you want
+
