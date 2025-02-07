@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 function Card(props) {
+  // props is an object that contains all the properties that are passed to this component
   return (
     <div>
       <h2>{props.name}</h2>

@@ -14,7 +14,7 @@ inquirer
     // console.log(answers)
     const url = answers.URL;
     var qr_svg = qr.image(url);
-    qr_svg.pipe(fs.createWriteStream("qr_code_img.png"));
+    qr_svg.pipe(fs.createWriteStream("qr_code_img2.png"));
 
     fs.writeFile("url.txt", url, (err) => {
       if (err) throw err;

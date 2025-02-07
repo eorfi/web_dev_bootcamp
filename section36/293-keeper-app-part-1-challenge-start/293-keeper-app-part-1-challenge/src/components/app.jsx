@@ -23,6 +23,7 @@ function App() {
       <Note />
       <Note />
       <Note />
+      <Note />
       <Footer />
 
     </div>

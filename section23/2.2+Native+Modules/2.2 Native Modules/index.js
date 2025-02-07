@@ -16,7 +16,7 @@ const fs = require("fs");
 // UTF-8 (Unicode Transformation Format - 8-bit) is a character encoding standard used to represent text in computers and other devices. It is designed to handle all characters in the Unicode standard, which includes nearly all characters from all written languages.
 
 
-fs.readFile("./message.txt", "utf8", (err, data) => {
+fs.readFile("./message1.txt", "utf8", (err, data) => {
   if (err) throw err;
   console.log(data);
 })

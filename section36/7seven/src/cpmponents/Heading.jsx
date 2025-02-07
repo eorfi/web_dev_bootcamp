@@ -17,7 +17,7 @@ function Heading() {
     greeting = "Good Afternoon";
     customStyle.color = "green";
   } else {
-    greeting = "Good Night";
+    greeting = "Good Night";qwqaaqaZz
     customStyle.color = "blue";
   }
 

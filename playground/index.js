@@ -1,36 +1,14 @@
-import express from "express";
-import pg from "pg";
-import axios from "axios"
-import bodyParser from "body-parser";
+import express from 'express';
 
 const app = express();
 const port = 3000;
+app.use(express.static('public'));
 
-const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "book_reviews",
-  password: "123456",
-  port: 5432,
-})
+app.get('/', (req, res) => {
+  console.log('Received request for /');
+  res.send('Hello from nodeJS!');
+});
 
-db.connect();
-
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
-
-app.get("/", async (req, res) => {
-  try {
-      const result = await db.query("SELECT * FROM books ORDER BY date_read DESC");
-      res.render("index.ejs", {books: result.rows});
-      
-  } catch (err) {
-      console.log(err)
-      res.status(500).send("Error retrieving books from the database.")
-  }
-})
-
-app.post("/add-book", async (req,res) => {
-  const {title, auther, rating, review, date_read} = req.body;
-  
-})
+app.listen(port, () => {
+    console.log(`Server running on port ${port}.`);
+    });

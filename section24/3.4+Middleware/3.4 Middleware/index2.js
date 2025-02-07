@@ -11,7 +11,7 @@ app.use(morgan("tiny"));
 
 
 app.get("/", (req, res) => {
-  res.send("Hello");
+  res.send("Hello from morgan");
 });
 
 app.listen(port, () => {

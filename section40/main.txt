@@ -1,0 +1,5 @@
+frist go to ubuntu.
+write cd ic-Projects.
+write dfx new section40 -> this is the name of the folder
+then open the ic-projects in vscode but with the ubuntu
+keap everythige as it is excebte the files in changed it in this folder

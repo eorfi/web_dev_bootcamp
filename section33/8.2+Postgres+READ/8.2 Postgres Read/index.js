@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
+// pg is a library that allows us to connect to a PostgreSQL database
 
 // define a new client
 const db = new pg.Client({
@@ -9,7 +10,7 @@ const db = new pg.Client({
   database: "world",
   password: "123456",
   port: "5432"
-});
+}); 
 
 const app = express();
 const port = 3000;
